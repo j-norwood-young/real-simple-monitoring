@@ -105,3 +105,7 @@ dist
 
 # Package management
 yarn.lock
+
+# Config
+config/development.json
+config/production.json
