@@ -1,0 +1,10 @@
+{
+    "services": [
+        "mongodb"
+    ],
+    "mongodb": {
+        "servers": [
+            "mongodb://localhost"
+        ]
+    }
+}

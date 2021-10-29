@@ -1,0 +1,26 @@
+{
+  "name": "real-simple-monitoring",
+  "version": "0.0.1",
+  "description": "Is all your shit running? OK!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-norwood-young/real-simple-monitoring.git"
+  },
+  "keywords": [
+    "monitoring"
+  ],
+  "author": "Jason Norwood-Young",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/j-norwood-young/real-simple-monitoring/issues"
+  },
+  "homepage": "https://github.com/j-norwood-young/real-simple-monitoring#readme",
+  "dependencies": {
+    "config": "^3.3.6",
+    "mongodb": "^4.1.3"
+  }
+}
