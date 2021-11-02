@@ -1,8 +1,8 @@
 {
-    "name": "@real-simple-monitor/elasticsearch",
+    "name": "@real-simple-monitor/redis",
     "version": "0.0.1",
-    "description": "Real Simple Monitoring - ElasticSearch Module",
-    "main": "elasticsearch.monitor.js",
+    "description": "Real Simple Monitoring - Redis Module",
+    "main": "redis.monitor.js",
     "scripts": {
         "start": "node index.js",
         "test": "mocha --timeout 10000"
@@ -10,6 +10,6 @@
     "author": "Jason Norwood-Young <jason@10layer.com>",
     "license": "MIT",
     "dependencies": {
-        "axios": "^0.24.0"
+        "redis": "^4.0.0-rc.3"
     }
 }
