@@ -49,3 +49,7 @@ Each service then has a section, with an array of `servers`. You can also add ad
 Assuming you've created a `config/production.json` file, you can run your server using `env NODE_ENV=production node index.js`. Then browse to http://your-server.com:8282 and, should everything be working, you'll get an "OK!".
 
 It defaults to port 8282, but you can set the port by setting the environmental variable `PORT`, `NODE_PORT`, or setting "port" in the config file. 
+
+## Do you display anything else apart from "OK!"?
+
+Yup, use the endpoints `/successes`, `/errors` and `/warnings` to see more detailed output. If there is an error, the error will be output (as JSON). 
