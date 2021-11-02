@@ -1,0 +1,20 @@
+{
+    "name": "@real_simple_monitoring/web",
+    "version": "0.0.1",
+    "description": "Real Simple Monitoring - Web Module",
+    "main": "web.monitor.js",
+    "scripts": {
+        "test": "mocha --timeout 10000"
+    },
+    "author": "Jason Norwood-Young <jason@10layer.com>",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^0.24.0"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "chai-http": "^4.3.0",
+        "mocha": "^7.1.2",
+        "should": "^13.2.3"
+    }
+}

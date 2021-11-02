@@ -1,23 +1,17 @@
-const mongodb = require("mongodb");
+const Monitor = require("@real-simple-monitoring/shared/monitor");
 const MongoClient = require('mongodb').MongoClient;
 
-class MongoDB_Monitor {
+class MongoDB_Monitor extends Monitor {
     constructor(params) {
+        super(params);
         this.params = Object.assign({
             socketTimeoutMS: 1000
         }, params)
-        const servers = this.params.servers;
-        if (!servers) throw "Missing servers parameter";
-        if (!Array.isArray(servers)) throw "Parameter servers needs to be an array";
-        this.servers = servers;
     }
 
     async check(id) {
-        const successes = [];
-        const errors = [];
-        const warnings = [];
         for (let server of this.servers) {
-            let safe_server = server.replace(/\/\/.*@/,"//***:***@")
+            let safe_server = this.safe_server(server)
             try {
                 console.log(`Testing MongoDB server ${server}`)
                 const mongo_client = new MongoClient(server, {
@@ -27,12 +21,11 @@ class MongoDB_Monitor {
                 });
                 await mongo_client.connect();
                 await mongo_client.db("admin").command({ ping: 1 });
-                successes.push(`Connected to ${server}`);
+                this.successes.push(`Connected to ${safe_server}`);
             } catch(err) {
-                errors.push({ safe_server, err });
+                this.errors.push({ safe_server, err });
             }
         }
-        return { successes, errors, warnings };
     }
 }
 

@@ -1,10 +1,29 @@
 {
+    "port": 8282,
     "services": [
-        "mongodb"
+        "mongodb",
+        "elasticsearch",
+        "web"
     ],
     "mongodb": {
         "servers": [
             "mongodb://localhost"
+        ]
+    },
+    "elasticsearch": {
+        "servers": [
+            "http://localhost:9200"
+        ]
+    },
+    "web": {
+        "servers": [
+            "https://google.com"
+        ],
+        "params": {
+            "timeout": 1000
+        },
+        "expected": [
+            "<!doctype html>"
         ]
     }
 }

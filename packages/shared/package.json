@@ -1,0 +1,17 @@
+{
+    "name": "@real-simple-monitoring/shared",
+    "version": "0.0.1",
+    "description": "Real Simple Monitoring - MongoDB Module",
+    "main": "mongodb.monitor.js",
+    "scripts": {
+        "test": "mocha --timeout 10000"
+    },
+    "author": "Jason Norwood-Young <jason@10layer.com>",
+    "license": "MIT",
+    "dependencies": {
+        
+    },
+    "devDependencies": {
+       
+    }
+}
