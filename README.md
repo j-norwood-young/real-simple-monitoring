@@ -38,7 +38,7 @@ It's pretty easy to write a new module. See the `/packages` for examples. Else c
 
 ## Configuration
 
-We use the (config)[https://www.npmjs.com/package/config] package to configure our system. Copy the `config/default.json` to `config/production.json`, and then edit it for your needs. 
+We use the [config](https://www.npmjs.com/package/config) package to configure our system. Copy the `config/default.json` to `config/production.json`, and then edit it for your needs. 
 
 The `services` section is an array describing which services to run for each check.
 
