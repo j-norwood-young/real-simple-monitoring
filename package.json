@@ -1,6 +1,6 @@
 {
   "name": "real-simple-monitoring",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "Is all your shit running? OK!",
   "private": true,
   "workspaces": [
