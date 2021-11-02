@@ -77,19 +77,22 @@ const requestListener = async function (req, res) {
         res.end();
     } else {
         res.writeHead(200);
-        res.end('OK!');
+        res.write('OK!');
+        res.end();
     }
 }
 
-const main = () => {
+const Server = () => {
     try {
         const server = http.createServer(requestListener);
         const port = process.env.PORT || process.env.NODE_PORT || config.port || 8282;
         server.listen(port);
         console.log(`real-simple-monitoring listening on port ${port}`)
+        return server;
     } catch(err) {
         console.error(err);
     }
 }
+if (!process.env.JEST_WORKER_ID) Server();
 
-main();
+module.exports = http.createServer(requestListener);

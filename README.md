@@ -26,7 +26,7 @@ The health of the cluster is monitored. If it's yellow, you'll get a warning. If
 
 ### MongoDB
 
-We check that we can connect to and ping the servers
+We check that we can connect to and ping the servers.
 
 ### Web
 

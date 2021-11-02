@@ -1,0 +1,17 @@
+{
+    "port": 8283,
+    "services": [
+        "web"
+    ],
+    "web": {
+        "servers": [
+            "https://google.com"
+        ],
+        "params": {
+            "timeout": 1000
+        },
+        "expected": [
+            "<!doctype html>"
+        ]
+    }
+}
